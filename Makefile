@@ -1,4 +1,5 @@
 install:
+	cp .env.example .env
 	docker run --rm -v ./:/app -w /app composer install
 	docker run --rm -v ./:/app -w /app node:latest npm install --force
 	./vendor/bin/sail up -d --force-recreate

@@ -8,7 +8,11 @@ Os scripts e o DLL da base requisitados no teste estão na pasta ./database/scri
 A collection da API está na pasta ./setup/dev
 
 # Subindo o projeto
-Para subir o projeto pela primeira vez basta executar o comando `make install` isso vai instalar os pacotes do php e também do nodejs, subir os containers necessários para funcionar e executar as migrations e as seeds do projeto.
+Para subir o projeto pela primeira faça os seguintes passos.
+
+1. crie um arquivo .env na raiz do projeto
+2. copie os dados do arquivo .env.example para o .env
+3. execute o comando `make install` isso vai instalar os pacotes do php e também do nodejs, subir os containers necessários para funcionar e executar as migrations e as seeds do projeto
 
 # Executando migrations e seeds separado
 Caso queira executar as migrations e as seeds separados base executar o comando `make run-migrate` para migrations e `make run-seed` para as seeds

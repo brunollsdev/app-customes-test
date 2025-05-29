@@ -40,7 +40,7 @@ export const SearchCustomer = ({ onSearch }) => {
             gender: 'M',
             city: '',
             state: '',
-            date_birth: '',
+            date_birth: null,
         }
     })
 

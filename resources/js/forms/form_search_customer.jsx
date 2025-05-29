@@ -110,15 +110,13 @@ export const FormSearchCustomer = () => {
                         control={form.control}
                         name="date_birth"
                         render={({ field }) => {
-                            const date = field.value instanceof Date ? field.value : new Date(field.value);
-                            const isValidDate = isValid(date);
                             return (
                                 <FormItem className='w-full flex flex-col gap-2'>
                                     <FormLabel>Data de nascimento</FormLabel>
                                     <FormControl>
                                         <DatePicker
-                                            value={field.value}
-                                            onChange={field.onChange}
+                                            value={field.value instanceof Date ? field.value : undefined}
+                                            onChange={(date) => field.onChange(date ?? null)}
                                         />
                                     </FormControl>
                                     <FormMessage className='truncate' />

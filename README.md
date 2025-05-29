@@ -15,10 +15,8 @@ A collection da API está na pasta ./setup/dev
 
 Para subir o projeto pela primeira faça os seguintes passos.
 
-1. crie um arquivo .env na raiz do projeto
-2. copie os dados do arquivo .env.example para o .env
-3. execute o comando `make install` isso vai instalar os pacotes do php e também do nodejs e subir os containers necessários
-4. execute o comando `make db` para executar as migrations e as seeds
+1. execute o comando `make install` isso vai instalar os pacotes do php e também do nodejs e subir os containers necessários
+2. execute o comando `make db` para executar as migrations e as seeds
 
 # Executando migrations e seeds separado
 

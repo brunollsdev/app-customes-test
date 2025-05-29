@@ -1,5 +1,5 @@
 import React from "react";
-import { format, getMonth, getYear, setMonth, setYear } from "date-fns";
+import { format, getMonth, getYear, parse, setMonth, setYear } from "date-fns";
 import { Calendar as CalendarIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -23,8 +23,10 @@ export function DatePicker({ startYear, endYear, value, onChange }) {
     const minYear = startYear ?? getYear(today) - 100;
     const maxYear = endYear ?? getYear(today) + 100;
 
-    const [setDate] = React.useState(today);
-
+    if (!(value instanceof Date) && value != undefined) {
+        value = new Date(`${value}T00:00:00`)
+    }
+    
     const date = value instanceof Date && !isNaN(value) ? value : today;
 
     const months = [

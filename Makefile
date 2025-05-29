@@ -2,10 +2,12 @@ install:
 	docker run --rm -v ./:/app -w /app composer install
 	docker run --rm -v ./:/app -w /app node:latest npm install --force
 	./vendor/bin/sail up -d --force-recreate
-	make run-migrate
-	make run-seed
 	make key-generate
 	make run-front
+
+db:
+	make run-migrate
+	make run-seed
 
 up:
 	./vendor/bin/sail up -d --force-recreate

@@ -1,12 +1,6 @@
 import React from 'react';
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
-import { CalendarIcon } from 'lucide-react';
-import { Calendar } from '@/components/ui/calendar';
-import { format, isValid } from 'date-fns';
-import { cn } from '@/lib/utils';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { useFormContext } from 'react-hook-form';
@@ -93,8 +87,6 @@ export const FormRegisterCustomer = () => {
                         control={form.control}
                         name="date_birth"
                         render={({ field }) => {
-                            // const date = field.value instanceof Date ? field.value : new Date(field.value);
-                            // const isValidDate = isValid(date);
                             return (
                                 <FormItem className='w-full flex flex-col gap-2'>
                                     <FormLabel>Data de nascimento</FormLabel>
